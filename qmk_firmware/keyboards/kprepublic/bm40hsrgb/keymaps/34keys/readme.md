@@ -1,4 +1,4 @@
-# The 35 keymap for my custom keyboards
+# The 35 keymap for bm40hsrgb
 
 This layout is made almost entirely from [miryoku](https://github.com/manna-harbour/miryoku). However, I used fewer layers and reduced 36 keys to 34.
 
@@ -8,9 +8,10 @@ Replaced the Ctrl, GUI, Alt, and Shift keys with home mod row. A combo function 
 
 And because I'm Korean, a combo for Korean and English keyboard conversion has been added, but if you don't need it, you can delete it.
 
-# Keyboards
 
-I own moonlander, bm40(flank clone)and sweep(ferris clone). Moonlander has there own program which is called oryx but bm40 and sweep is not. This repo contain qmk firmware code for that.
+- Flash:
+
+  `qmk flash -kb kprepublic/bm40hsrgb -km 34keys`
 
 # Layout
 
