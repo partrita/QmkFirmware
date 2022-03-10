@@ -34,15 +34,6 @@ enum ferris_layers {
 #define NAVI MO(_Navi)
 #define NUMB MO(_Numb)
 
-// #define KC_CTSC RCTL_T(KC_SCLN)
-// #define KC_CTLA LCTL_T(KC_A)
-// #define KC_LSHZ LSFT_T(KC_Z)
-// #define KC_RLSH RSFT_T(KC_SLSH)
-// #define KC_SPM2 LT(2, KC_SPC)
-// #define KC_BSM1 LT(1, KC_BSPC)
-// #define KC_GUTA GUI_T(KC_TAB)
-// #define KC_CLGV CTL_T(KC_GRV)
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_Base] = LAYOUT( /* QWERTY */
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,  KC_I,    KC_O,   KC_P,

@@ -1,4 +1,4 @@
-# The 35 keymap for bm40hsrgb
+# The 34 keymap for bm40hsrgb
 
 This layout is made almost entirely from [miryoku](https://github.com/manna-harbour/miryoku). However, I used fewer layers and reduced 36 keys to 34.
 
@@ -21,7 +21,7 @@ Press and hold to activate the keys in parentheses.
 
 | Q | W | E | R | T | | | Y | U | I | O | P | 
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| A(GUI) | S(Alt) | D(Ctrl) | F(Shift) |  G | |  | H | J(Shift) | K(Ctrl)  | L(Alt) | '(GUI) |
+| A(Shift) | S(Ctrl) | D(Win) | F(Alt) |  G | |  | H | J(Alt) | K(Win)  | L(Ctrl) | '(Shift) |
 | Z | X| C| V| B| | | N | M | , | . | /|
 | | | | NaviLayer| Space(_Func) | | | Backspace | NumberLayer | | | |  
 
@@ -29,7 +29,7 @@ Press and hold to activate the keys in parentheses.
 
 | Mousewheel left | Mousewheel down | Mousewheel up | Mousewheel right | ESC | | | DEL | HOME | PageDown | PageUP | END | 
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| A(GUI) | S(Alt) | D(Ctrl) | F(Shift) |  TAB | |  | ENTER | J(Shift) | K(Ctrl)  | L(Alt) | '(GUI) |
+| A(Shift) | S(Ctrl) | D(Win) | F(Alt) |  TAB | |  | ENTER | J(Alt) | K(Win)  | L(Ctrl) | '(Shift) |
 | Mouse left | Mouse down | Mouse up| Mouse right | left click | | | left click | Left | Down | Up | Right |
 | | | |  | Space | | | Backspace | NumberLayer | | | |  
 
@@ -37,7 +37,7 @@ Press and hold to activate the keys in parentheses.
 
 | [ | 7 | 8 | 9 | ] | | | DEL |  |  |  |  | 
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ; | 4 | 5 | 6 | = | |  | ENTER | J(Shift) | K(Ctrl)  | L(Alt) | '(GUI) |
+| ; | 4 | 5 | 6 | = | |  | ENTER | J(Alt) | K(Win)  | L(Ctrl) | '(Shift) |
 | ` |  1 | 2 | 3 | \ | | |  |  |  |  | |
 | | | | 0|  - | | | Backspace | | | | |  
 
@@ -45,6 +45,6 @@ Press and hold to activate the keys in parentheses.
 
 | F12 | F7 | F8 | F9 | PrintScreen | | | RESET |  |  |  |  | 
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| F11 | F4 | F5 | F6 | ScrollLock | |  | CapsLock | J(Shift) | K(Ctrl)  | L(Alt) | '(GUI) |
+| F11 | F4 | F5 | F6 | ScrollLock | |  | CapsLock | J(Alt) | K(Win)  | L(Ctrl) | '(Shift) |
 | F10 |  F1 | F2 | F3 | PauseBreak | | | Insert |  |  |  | |
 | | | | NaviLayer | Space | | | Backspace | NumberLayer | | | |  
