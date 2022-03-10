@@ -85,7 +85,7 @@ enum combos {
 };
 
 const uint16_t PROGMEM sft_han_combo[] = {LSFT_T(KC_A), LT(_Func,KC_SPC), COMBO_END};
-const uint16_t PROGMEM ctrl_s[] = {LCTL_T(KC_S), LGUI_T(KC_D), COMBO_END};
+const uint16_t PROGMEM save_combo[] = {LCTL_T(KC_S), LGUI_T(KC_D), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [SFT_HAN] = COMBO(sft_han_combo, KC_HAEN),
