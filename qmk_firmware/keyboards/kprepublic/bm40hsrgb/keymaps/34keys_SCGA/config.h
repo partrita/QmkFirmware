@@ -30,7 +30,7 @@
 #define MOUSEKEY_TIME_TO_MAX    64
 
 //  The firmware is too large!
-#define COMBO_COUNT 1 // number of combo
+#define COMBO_COUNT 2 // number of combo
 #define COMBO_TERM 40 // timeout period for combos to 40ms.
 
 //disable broken animations

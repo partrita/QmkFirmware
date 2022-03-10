@@ -77,10 +77,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 enum combos {
   SFT_HAN,
+  SAVE_COMBO,
 };
 
-const uint16_t PROGMEM sft_han_combo[] = {LSFT_T(KC_F), LT(_Func,KC_SPC), COMBO_END};
+const uint16_t PROGMEM sft_han_combo[] = {LSFT_T(KC_A), LT(_Func,KC_SPC), COMBO_END};
+const uint16_t PROGMEM ctrl_s[] = {LCTL_T(KC_S), LGUI_T(KC_D), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [SFT_HAN] = COMBO(sft_han_combo, KC_HAEN),
+  [SAVE_COMBO] = COMBO_ACTION(save_combo),
 };
+
+void process_combo_event(uint16_t combo_index, bool pressed) {
+  switch(combo_index) {
+    // case EM_EMAIL:
+    //   if (pressed) {
+    //     SEND_STRING("john.doe@example.com");
+    //   }
+    //   break;
+    case SAVE_COMBO:
+      if (pressed) {
+        tap_code16(S(KC_LCTL));
+        tap_code16(KC_S);
+      }
+      break;
+  }
+}

@@ -35,5 +35,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX    64
 
-#define COMBO_COUNT 1 // number of combo
+#define COMBO_COUNT 2 // number of combo
 #define COMBO_TERM 40 // timeout period for combos to 40ms.
