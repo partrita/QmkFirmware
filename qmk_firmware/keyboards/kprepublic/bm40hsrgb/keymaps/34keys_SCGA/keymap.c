@@ -101,8 +101,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     //   break;
     case SAVE_COMBO:
       if (pressed) {
-        tap_code16(S(KC_LCTL));
-        tap_code16(KC_S);
+        tap_code16(C(KC_S));
       }
       break;
   }
