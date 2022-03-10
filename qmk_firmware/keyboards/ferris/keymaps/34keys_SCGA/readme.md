@@ -1,4 +1,4 @@
-# The 34 keymap for ferris keyboards
+# The 34 keymap for sweep keyboards
 
 This layout is made almost entirely from [miryoku](https://github.com/manna-harbour/miryoku). However, I used fewer layers and reduced 36 keys to 34.
 
@@ -11,7 +11,7 @@ And because I'm Korean, a combo for Korean and English keyboard conversion has b
 
 - Flash:
 
-  `qmk flash -kb ferris -km 34keys`
+  `qmk flash -kb ferris/sweep -km 34keys`
 
 # Layout
 
