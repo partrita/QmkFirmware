@@ -15,9 +15,12 @@ enum ferris_layers {
   _Func,
 };
 
-// enum ferris_tap_dances {
-//   TD_Q_ESC
-// };
+enum ferris_tap_dances {
+    TD_C,
+    TD_V,
+    TD_X,
+    TD_Z,
+};
 
 // Left-hand home row mods - Base Layer
 #define HOME_A LGUI_T(KC_A)
@@ -34,12 +37,27 @@ enum ferris_layers {
 #define NAVI MO(_Navi)
 #define NUMB MO(_Numb)
 
+// for tap dance
+#define COPY LCTL(KC_C)
+#define PASTE LCTL(KC_V)
+#define CUT LCTL(KC_X)
+#define UNDO LCTL(KC_Z)
+
+// Tap Dance Definitions
+qk_tap_dance_action_t tap_dance_actions[] = {
+    // Tap once for Q, twice for ESC
+    [TD_C] = ACTION_TAP_DANCE_DOUBLE(KC_C, COPY),
+    [TD_V] = ACTION_TAP_DANCE_DOUBLE(KC_V, PASTE),
+    [TD_X] = ACTION_TAP_DANCE_DOUBLE(KC_X, CUT),
+    [TD_Z] = ACTION_TAP_DANCE_DOUBLE(KC_Z, UNDO),
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_Base] = LAYOUT( /* QWERTY */
-    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,            KC_Y,    KC_U,  KC_I,    KC_O,   KC_P,
-    HOME_A, HOME_S,    HOME_D,    HOME_F,    KC_G,       KC_H,    HOME_J,  HOME_K,    HOME_L,      HOME_QU,
-    KC_Z, KC_X,    KC_C,    KC_V,    KC_B,            KC_N,    KC_M,  KC_COMM, KC_DOT, KC_SLSH,
-                                    NAVI, Lay_SPC,  KC_BSPC,       NUMB
+    KC_Q,       KC_W,    KC_E,       KC_R,    KC_T,            KC_Y,    KC_U,     KC_I,      KC_O,          KC_P,
+    HOME_A,    HOME_S,   HOME_D,   HOME_F,    KC_G,            KC_H,    HOME_J,  HOME_K,    HOME_L,      HOME_QU,
+    TD(TD_Z), TD(TD_X), TD(TD_C), TD(TD_V),   KC_B,            KC_N,    KC_M,   KC_COMM,    KC_DOT,      KC_SLSH,
+                                     NAVI, Lay_SPC,         KC_BSPC,       NUMB
   ),
 
   [_Navi] = LAYOUT(
@@ -61,13 +79,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                      KC_NO,       Lay_SPC,            KC_BSPC,      KC_NO
       )
 };
-
-// Tap Dance Definitions
-// qk_tap_dance_action_t tap_dance_actions[] = {
-//     // Tap once for Q, twice for ESC
-//     [TD_Q_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_ESC)
-// };
-
 
 // modify `config.h` file
 // by adding #define COMBO_COUNT 1 (replacing 1 with the number that you’re using).
