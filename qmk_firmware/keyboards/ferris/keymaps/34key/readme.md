@@ -15,7 +15,7 @@ And because I'm Korean, a combo for Korean and English keyboard conversion has b
 
 # Layout
 
-Press and hold to activate the keys in parentheses.
+![](https://raw.githubusercontent.com/partrita/myKeyboard/main/qmk_firmware/keyboards/ferris/keymaps/mysweep.png)
 
 ## _BASE(QWERTY)
 
