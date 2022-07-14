@@ -10,9 +10,7 @@ enum ferris_layers {
 
 enum tap_dance_codes {
   DANCE_01,
-//   DANCE_02,
-//   DANCE_03,
-//   DANCE_04,
+  DANCE_02,
 };
 
 // Left-hand home row mods - Base Layer
@@ -227,110 +225,9 @@ void dance_02_reset(qk_tap_dance_state_t *state, void *user_data) {
   dance_state.step = 0;
 }
 
-// DANCE_03
-void on_dance_03(qk_tap_dance_state_t *state, void *user_data);
-uint8_t dance_03_dance_step(qk_tap_dance_state_t *state);
-void dance_03_finished(qk_tap_dance_state_t *state, void *user_data);
-void dance_03_reset(qk_tap_dance_state_t *state, void *user_data);
-
-void on_dance_03(qk_tap_dance_state_t *state, void *user_data) {
-  if(state->count == 3) {
-    tap_code16(KC_V);
-    tap_code16(KC_V);
-    tap_code16(KC_V);
-  }
-  if(state->count > 3) {
-    tap_code16(KC_V);
-  }
-}
-
-uint8_t dance_03_dance_step(qk_tap_dance_state_t *state) {
-  if (state->count == 1) {
-    if (state->interrupted || !state->pressed) return SINGLE_TAP;
-    else return SINGLE_HOLD;
-  } else if (state->count == 2) {
-    if (state->interrupted) return DOUBLE_SINGLE_TAP;
-    else if (state->pressed) return DOUBLE_HOLD;
-    else return DOUBLE_TAP;
-  }
-  return MORE_TAPS;
-}
-
-void dance_03_finished(qk_tap_dance_state_t *state, void *user_data) {
-  dance_state.step = dance_03_dance_step(state);
-  switch (dance_state.step) {
-    case SINGLE_TAP: register_code16(KC_V); break;
-    case SINGLE_HOLD: register_code16(KC_LSFT); break;
-    case DOUBLE_TAP: register_code16(PASTE); break;
-    case DOUBLE_SINGLE_TAP: tap_code16(KC_V);
-  }
-}
-
-void dance_03_reset(qk_tap_dance_state_t *state, void *user_data) {
-  wait_ms(10);
-  switch (dance_state.step) {
-    case SINGLE_TAP: unregister_code16(KC_V); break;
-    case SINGLE_HOLD: unregister_code16(KC_LSFT); break;
-    case DOUBLE_TAP: unregister_code16(PASTE); break;
-    case DOUBLE_SINGLE_TAP: unregister_code16(KC_V); break;
-  }
-  dance_state.step = 0;
-}
-
-// DANCE_04
-void on_dance_04(qk_tap_dance_state_t *state, void *user_data);
-uint8_t dance_04_dance_step(qk_tap_dance_state_t *state);
-void dance_04_finished(qk_tap_dance_state_t *state, void *user_data);
-void dance_04_reset(qk_tap_dance_state_t *state, void *user_data);
-
-void on_dance_04(qk_tap_dance_state_t *state, void *user_data) {
-  if(state->count == 3) {
-    tap_code16(KC_DOT);
-    tap_code16(KC_DOT);
-    tap_code16(KC_DOT);
-  }
-  if(state->count > 3) {
-    tap_code16(KC_DOT);
-  }
-}
-
-uint8_t dance_04_dance_step(qk_tap_dance_state_t *state) {
-  if (state->count == 1) {
-    if (state->interrupted || !state->pressed) return SINGLE_TAP;
-    else return SINGLE_HOLD;
-  } else if (state->count == 2) {
-    if (state->interrupted) return DOUBLE_SINGLE_TAP;
-    else if (state->pressed) return DOUBLE_HOLD;
-    else return DOUBLE_TAP;
-  }
-  return MORE_TAPS;
-}
-
-void dance_04_finished(qk_tap_dance_state_t *state, void *user_data) {
-  dance_state.step = dance_04_dance_step(state);
-  switch (dance_state.step) {
-    case SINGLE_TAP: register_code16(KC_DOT); break;
-    case SINGLE_HOLD: register_code16(KC_QUOT); break;
-    case DOUBLE_TAP: register_code16(KC_DOT); break;
-    case DOUBLE_SINGLE_TAP: tap_code16(KC_DOT);
-  }
-}
-
-void dance_04_reset(qk_tap_dance_state_t *state, void *user_data) {
-  wait_ms(10);
-  switch (dance_state.step) {
-    case SINGLE_TAP: unregister_code16(KC_DOT); break;
-    case SINGLE_HOLD: unregister_code16(KC_QUOT); break;
-    case DOUBLE_TAP: unregister_code16(KC_DOT); break;
-    case DOUBLE_SINGLE_TAP: unregister_code16(KC_DOT); break;
-  }
-  dance_state.step = 0;
-}
 
 qk_tap_dance_action_t tap_dance_actions[] = {
   [DANCE_01] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_01, dance_01_finished, dance_01_reset),
-//   [DANCE_02] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_02, dance_02_finished, dance_02_reset),
-//   [DANCE_03] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_03, dance_03_finished, dance_03_reset),
-//   [DANCE_04] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_04, dance_04_finished, dance_04_reset),
+  [DANCE_02] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_02, dance_02_finished, dance_02_reset),
 };
 
