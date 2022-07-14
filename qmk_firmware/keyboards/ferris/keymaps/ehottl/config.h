@@ -15,25 +15,35 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#define EE_HANDS
+
 #pragma once
 
-// Pick good defaults for enabling homerow modifiers
-#define TAPPING_TERM 210
 #define IGNORE_MOD_TAP_INTERRUPT
-#define PERMISSIVE_HOLD
 #define TAPPING_FORCE_HOLD
+#undef TAPPING_TERM
+// #define TAPPING_TERM 200
+#define TAPPING_TERM 180
+#define RETRO_TAPPING
 
-// Mouse key speed and acceleration.
 #undef MOUSEKEY_DELAY
-#define MOUSEKEY_DELAY          0
+#define MOUSEKEY_DELAY 5
 #undef MOUSEKEY_INTERVAL
-#define MOUSEKEY_INTERVAL       16
-#undef MOUSEKEY_WHEEL_DELAY
-#define MOUSEKEY_WHEEL_DELAY    0
+#define MOUSEKEY_INTERVAL 16
+#undef MOUSEKEY_MOVE_DELTA
+#define MOUSEKEY_MOVE_DELTA 1
+#undef MOUSEKEY_INITIAL_SPEED 
+#define MOUSEKEY_INITIAL_SPEED 1
+#undef MOUSEKEY_DECELERATED_SPEED
+#define MOUSEKEY_DECELERATED_SPEED 12
 #undef MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED      6
-#undef MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX    64
+#define MOUSEKEY_MAX_SPEED 22
+#define USB_SUSPEND_WAKEUP_DELAY 0
+#undef MOUSEKEY_WHEEL_INTERVAL
+#define MOUSEKEY_WHEEL_INTERVAL 83
+#undef MOUSEKEY_WHEEL_MAX_SPEED
+#define MOUSEKEY_WHEEL_MAX_SPEED 3
+
 #define COMBO_COUNT 1 // number of combo
 #define COMBO_TERM 40 // timeout period for combos to 40ms.
 #define DYNAMIC_TAPPING_TERM_INCREMENT 10
