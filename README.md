@@ -10,7 +10,7 @@ I own moonlander, bm40(flank clone)and sweep(ferris clone). Moonlander has there
 
 # Sweep layout for example.
 
-![](https://raw.githubusercontent.com/partrita/myKeyboard/main/qmk_firmware/keyboards/ferris/keymaps/mysweep.png)
+![](https://raw.githubusercontent.com/partrita/myKeyboard/main/qmk_firmware/keyboards/ferris/keymaps/keylayout.png)
 
 
 

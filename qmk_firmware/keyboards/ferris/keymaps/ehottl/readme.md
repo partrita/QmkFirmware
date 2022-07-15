@@ -15,7 +15,7 @@ And because I'm Korean, a combo for Korean and English keyboard conversion has b
 
 # Layout
 
-![](https://raw.githubusercontent.com/partrita/myKeyboard/main/qmk_firmware/keyboards/ferris/keymaps/mysweep.png)
+![](https://raw.githubusercontent.com/partrita/myKeyboard/main/qmk_firmware/keyboards/ferris/keymaps/keylayout.png)
 
 
 ```
