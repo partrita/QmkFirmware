@@ -12,7 +12,7 @@ enum tap_dance_codes {
   DANCE_02,
 };
 
-// Left-hand home row mods - Base Layer
+// home row mods - Base Layer
 #define H_Z LSFT_T(KC_Z)
 #define H_X LCTL_T(KC_X)
 #define H_C LGUI_T(KC_C)
@@ -52,9 +52,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ---------------------------------------------              ----------------------------------------------
         KC_LCTL, KC_MS_L, KC_MS_D, KC_MS_R, KC_TAB,                   KC_ENT, KC_BTN1, KC_NO, KC_BTN2, KC_NO,
         // ---------------------------------------------              ----------------------------------------------
-        KC_LSFT,  KC_CUT, KC_COPY, KC_PASTE, KC_NO,                   KC_NO, KC_RALT, KC_LGUI, KC_LCTL, KC_LSFT,
+        KC_LSFT, KC_CUT, KC_COPY, KC_PSTE, KC_NO,                    KC_NO, KC_RALT, KC_LGUI, KC_LCTL, KC_LSFT,
         // ---------------------------------------------              ----------------------------------------------
-                                         KC_NO, FUNC,                 KC_BSPC, KC_HAEN
+                                         KC_NO, FUNC,                 KC_BSPC, KC_LNG1
         // ---------------------------------------------              ----------------------------------------------
         ),
 
@@ -72,13 +72,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
     [Func] = LAYOUT(
         // ---------------------------------------------              ----------------------------------------------
-        KC_F12, KC_F7, KC_F8, KC_F9, KC_PSCR,                         RESET, DT_PRNT, DT_DOWN, DT_UP, KC_NO, 
+        KC_F12, KC_F7, KC_F8, KC_F9, KC_PSCR,                         QK_BOOT, DT_PRNT, DT_DOWN, DT_UP, KC_NO, 
         // ---------------------------------------------              ----------------------------------------------
         KC_F11, KC_F4, KC_F5, KC_F6, KC_SCRL,                         KC_CAPS, KC_NO, KC_NO, KC_NO, KC_NO, 
         // ---------------------------------------------              ----------------------------------------------
         KC_F10, KC_F1, KC_F2, KC_F3, KC_PAUS,                         KC_INS, KC_NO, KC_NO, KC_NO, KC_NO,
         // ---------------------------------------------              ----------------------------------------------
-                                         KC_NO, FUNC,                 KC_BSPC, KC_HAEN
+                                         KC_NO, FUNC,                 KC_BSPC, KC_LNG1
         // ---------------------------------------------              ----------------------------------------------
         ),
 };
@@ -95,7 +95,7 @@ enum combos {
 const uint16_t PROGMEM kor[] = {KC_BSPC, LT(Func, KC_SPC), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    [KOR] = COMBO(kor, KC_HAEN),
+    [KOR] = COMBO(kor, KC_LNG1),
 };
 
 
