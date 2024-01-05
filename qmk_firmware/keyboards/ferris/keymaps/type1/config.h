@@ -15,18 +15,16 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#define EE_HANDS
-
 #pragma once
 
-#define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_FORCE_HOLD
-#undef TAPPING_TERM
+// Home row mod
+// Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 200
-#define RETRO_TAPPING
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define QUICK_TAP_TERM 0
 
-// combokey
-#define COMBO_COUNT 1 // number of combo
+// combo key
+#define COMBO_COUNT 3 // number of combo
 #define COMBO_TERM 40 // timeout period for combos to 40ms.
 #define DYNAMIC_TAPPING_TERM_INCREMENT 10
 
